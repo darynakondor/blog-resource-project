@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(/public/images/body-bg.jpg);
+}
+
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.menu-area {
+  background-color: black;
+}
+.menu-area .header-menu .upper-menu {
+  font-family: "Arimo", sans-serif;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+.menu-area .header-menu .upper-menu li {
+  text-align: center;
+  list-style: none;
+}
+.menu-area .header-menu .upper-menu li:hover .sub-menu {
+  display: block;
+}
+.menu-area .header-menu .upper-menu li .no-link, .menu-area .header-menu .upper-menu li .sub-menu-no-link {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.menu-area .header-menu .upper-menu li .no-link:hover, .menu-area .header-menu .upper-menu li .sub-menu-no-link:hover {
+  color: #fff;
+}
+.menu-area .header-menu .upper-menu li .no-link:active, .menu-area .header-menu .upper-menu li .sub-menu-no-link:active {
+  color: #fff;
+}
+.menu-area .header-menu .upper-menu li .no-link .item-wrapper, .menu-area .header-menu .upper-menu li .sub-menu-no-link .item-wrapper {
+  padding: 0px 19px;
+}
+.menu-area .header-menu .upper-menu li .no-link .item-wrapper .item-inner, .menu-area .header-menu .upper-menu li .sub-menu-no-link .item-wrapper .item-inner {
+  position: relative;
+}
+.menu-area .header-menu .upper-menu li .no-link .item-wrapper .item-inner:hover .hover-text, .menu-area .header-menu .upper-menu li .sub-menu-no-link .item-wrapper .item-inner:hover .hover-text {
+  width: 100%;
+}
+.menu-area .header-menu .upper-menu li .no-link .item-wrapper .item-inner .item-text, .menu-area .header-menu .upper-menu li .sub-menu-no-link .item-wrapper .item-inner .item-text {
+  color: #959595;
+  white-space: nowrap;
+}
+.menu-area .header-menu .upper-menu li .no-link .item-wrapper .item-inner .hover-text, .menu-area .header-menu .upper-menu li .sub-menu-no-link .item-wrapper .item-inner .hover-text {
+  color: #fff;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 0;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+.menu-area .header-menu .upper-menu li .no-link .item-text {
+  line-height: 50px;
+}
+.menu-area .header-menu .upper-menu li .sub-menu {
+  position: absolute;
+  display: none;
+}
+.menu-area .header-menu .upper-menu li .sub-menu .wrapper ul {
+  padding: 15px 0px;
+  padding-right: 90px;
+  background: url(/public/images/dropdown-back.jpg);
+}
+.menu-area .header-menu .upper-menu li .sub-menu .wrapper ul li {
+  text-align: left;
+}
+.menu-area .header-menu .upper-menu li .sub-menu .wrapper ul li .sub-menu-no-link {
+  margin: 0px 22px;
+  padding: 0px 4px;
+}
+.menu-area .header-menu .upper-menu li .sub-menu .wrapper ul li .sub-menu-no-link .item-wrapper {
+  padding: 0px;
+}
+.menu-area .header-menu .upper-menu li .sub-menu .wrapper ul li .sub-menu-no-link .item-wrapper .item-inner .item-text {
+  line-height: 35px;
+}/*# sourceMappingURL=Menu.css.map */

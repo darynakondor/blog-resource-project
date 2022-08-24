@@ -1,0 +1,73 @@
+.grid {
+  padding: 0px 25px;
+}
+
+.logo-area {
+  position: relative;
+  top: 0;
+  padding-right: 10px;
+  padding-bottom: 50px;
+  background-color: #fff;
+}
+.logo-area .top-bar {
+  padding: 12px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.logo-area .top-bar .left-elements {
+  display: grid;
+  grid-template-columns: 0.01fr 0.01fr 0.01fr;
+  gap: 20px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+.logo-area .top-bar .left-elements .icon-top-bar .link-social .icon-twitter, .logo-area .top-bar .left-elements .icon-top-bar .link-social .icon-pinterest, .logo-area .top-bar .left-elements .icon-top-bar .link-social .icon-vimeo {
+  display: block;
+  width: 16px;
+  height: 24px;
+}
+.logo-area .top-bar .left-elements .icon-top-bar .link-social .icon-twitter:hover, .logo-area .top-bar .left-elements .icon-top-bar .link-social .icon-pinterest:hover, .logo-area .top-bar .left-elements .icon-top-bar .link-social .icon-vimeo:hover {
+  -webkit-filter: opacity(0.5);
+          filter: opacity(0.5);
+}
+.logo-area .top-bar .left-elements .icon-top-bar .link-social .icon-twitter {
+  background: url(/public/images/icon-twitter.svg) center no-repeat;
+}
+.logo-area .top-bar .left-elements .icon-top-bar .link-social .icon-pinterest {
+  background: url(/public/images/icon-pinterest.svg) center no-repeat;
+}
+.logo-area .top-bar .left-elements .icon-top-bar .link-social .icon-vimeo {
+  background: url(/public/images/icon-vimeo.svg) center no-repeat;
+}
+.logo-area .top-bar .right-elements {
+  display: grid;
+  grid-template-columns: 0.01fr 0.01fr;
+  gap: 20px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+.logo-area .top-bar .right-elements .icon-menu, .logo-area .top-bar .right-elements .icon-search {
+  display: block;
+  width: 16px;
+  height: 24px;
+  cursor: pointer;
+}
+.logo-area .top-bar .right-elements .icon-menu {
+  background: url(/public/images/icon-burger.svg) center no-repeat;
+}
+.logo-area .top-bar .right-elements .icon-search {
+  background: url(/public/images/icon-search.svg) center no-repeat;
+}
+.logo-area .logo-wrapper {
+  text-align: center;
+}
+.logo-area .logo-wrapper .logo {
+  cursor: pointer;
+  height: 122px;
+}
+.logo-area .logo-wrapper .logo img {
+  max-width: 100%;
+  max-height: 100%;
+}/*# sourceMappingURL=LogoArea.css.map */
