@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+.menuArea {
+    background-color: black;
+    position: sticky;
+    .headerMenu {
+        .upperMenu {
+            font-family: 'Arimo', sans-serif;
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+            li {
+                text-align: center;
+                list-style: none;
+                position: relative;
+                .menuItem {
+                    color: #fff;
+                }
+                .activeMenuItem,
+                .subMenuLink {
+                    font-weight: 400;
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    text-decoration: none;
+                    &:hover {
+                        color: #fff;
+                    }
+                    cursor: pointer;
+                    .itemWrapper {
+                        padding: 0px 19px;
+                        .itemInner {
+                            position: relative;
+                            &:hover .hoverText {
+                                width: 100%;
+                            }
+                            .itemText {
+                                color: #959595;
+                                white-space: nowrap;
+                            }
+                            .hoverText {
+                                color: #fff;
+                                white-space: nowrap;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                overflow: hidden;
+                                width: 0;
+                                transition: width 0.5s;
+                            }
+                        }
+                    }
+                }
+                .activeMenuItem {
+                    .itemText {
+                        line-height: 50px;
+                    }
+                }
+                .subMenu, .subMenuMobile {
+                    display: none;
+                    ul {
+                        li {
+                            .subMenuLink {
+                                margin: 0px 22px;
+                                padding: 0px 4px;
+                                .itemWrapper {
+                                    padding: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .menuArea {
+        .mobileOppenedMenu {
+            display: flex;
+            justify-content: center;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            position: relative;
+            .biList {
+                color: #fff;
+            }
+        }
+        .headerMenu {
+            position: absolute;
+            left: 0;
+            right: 0;
+            .upperMenu {
+                li {
+                    background-color: black;
+                    .activeMenuItem {
+                        .itemText {
+                            position: relative; 
+                            .biChevronDown {
+                                position: absolute;
+                                top: 0;
+                                left: calc(130px + (340 - 130) * ((100vw - 320px) / (767 - 320)));
+                            }
+                        }
+                    }
+                    .subMenuMobile {
+                        left: 0;
+                        right: 0;
+                        .subMenuLink {
+                            margin: 0px 22px;
+                            padding: 0px 4px;
+                            .itemWrapper {
+                                .itemInner {
+                                    .itemText {
+                                        line-height: 50px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .subMenu {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .menuArea {
+        .mobileOppenedMenu {
+            display: none;
+        }
+        .headerMenu {
+            .upperMenu {
+                display: flex !important;
+                height: 50px;
+                li {
+                    &:hover .subMenu {
+                        display: block;
+                    }
+                    .menuItem {
+                        color: #fff;
+                    }
+                    .activeMenuItem {
+                        color: #fff;
+                    }
+                    .activeMenuItem {
+                        .biChevronDown {
+                            display: none;
+                        }
+                    }
+                    .subMenu {
+                        position: absolute;
+                        ul {
+                            padding: 15px 0px;
+                            padding-right: 90px;
+                            background: url(../../../public/images/dropdown-back.jpg);
+                            li {
+                                text-align: left;
+                                .subMenuLink {
+                                    margin: 0px 22px;
+                                    padding: 0px 4px;
+                                    .itemWrapper {
+                                        padding: 0px;
+                                        .itemInner {
+                                            .itemText {
+                                                line-height: 35px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .subMenuMobile {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}

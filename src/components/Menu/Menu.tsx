@@ -1,280 +1,597 @@
-import React from "react";
-import './Menu.css'
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import './Menu.scss'
+import classes from './Menu.module.scss'
 type Props = {}
 
 const Menu = (props: Props) => {
+    const [displayMenu, setDisplayMenu] = useState<string>('none')
+    const [displaySubMenu, setDisplaySubMenu] = useState<string>('none')
+    const toggleOpenMenu = () =>
+        setDisplayMenu((prevState: string) =>
+            prevState === 'none' ? 'block' : 'none'
+        )
+    const toggleSubMenu = () =>
+        setDisplaySubMenu((prevState: string) =>
+            prevState === 'none' ? 'block' : 'none'
+        )
     return (
         <>
-            <div className="menu-area">
-                <div className="grid">
-                    <div className="menu">
-                        <nav className="header-menu">
-                            <ul className="upper-menu">
+            <div className={classes.menuArea}>
+                <div className={classes.grid}>
+                    <div className={classes.menu}>
+                        <div
+                            onClick={toggleOpenMenu}
+                            className={classes.mobileOppenedMenu}
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                fill="currentColor"
+                                className={classes.biList}
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                                />
+                            </svg>
+                        </div>
+                        <nav className={classes.headerMenu}>
+                            <ul
+                                className={classes.upperMenu}
+                                style={{
+                                    display: `${displayMenu}`,
+                                }}
+                            >
                                 <li>
-                                    <div className="no-link">
-                                        <span className="item-wrapper">
-                                            <span className="item-inner">
-                                                <span className="item-text">
+                                    <NavLink
+                                        to={''}
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? classes.activeMenuItem
+                                                : classes.menuItem
+                                        }
+                                    >
+                                        <span className={classes.itemWrapper}>
+                                            <span className={classes.itemInner}>
+                                                <span
+                                                    className={classes.itemText}
+                                                >
                                                     Home
                                                 </span>
-                                                <span className="hover-text">
+                                                <span
+                                                    className={
+                                                        classes.hoverText
+                                                    }
+                                                >
                                                     Home
                                                 </span>
                                             </span>
                                         </span>
-                                    </div>
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <div className="no-link">
-                                        <span className="item-wrapper">
-                                            <span className="item-inner">
-                                                <span className="item-text">
-                                                    Post types
+                                    <NavLink
+                                        to={''}
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? classes.activeMenuItem
+                                                : classes.menuItem
+                                        }
+                                    >
+                                        <span className={classes.itemWrapper}>
+                                            <span className={classes.itemInner}>
+                                                <span
+                                                    className={classes.itemText}
+                                                >
+                                                    About
                                                 </span>
-                                                <span className="hover-text">
-                                                    Post types
+                                                <span
+                                                    className={
+                                                        classes.hoverText
+                                                    }
+                                                >
+                                                    About
                                                 </span>
                                             </span>
                                         </span>
-                                    </div>
-                                    <div className="sub-menu">
-                                        <div className="wrapper">
+                                    </NavLink>
+                                </li>
+                                <li onClick={toggleSubMenu}>
+                                    <NavLink
+                                        to={''}
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? classes.activeMenuItem
+                                                : classes.menuItem
+                                        }
+                                    >
+                                        <div className={classes.itemWrapper}>
+                                            <span className={classes.itemInner}>
+                                                <span
+                                                    className={classes.itemText}
+                                                >
+                                                    Categories
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="16"
+                                                        height="16"
+                                                        fill="currentColor"
+                                                        className={
+                                                            classes.biChevronDown
+                                                        }
+                                                        viewBox="0 0 16 16"
+                                                    >
+                                                        <path
+                                                            fill-rule="evenodd"
+                                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span
+                                                    className={
+                                                        classes.hoverText
+                                                    }
+                                                >
+                                                    Categories
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </NavLink>
+                                    <div className={classes.subMenu}>
+                                        <div>
                                             <ul>
                                                 <li>
-                                                    <div className="sub-menu-no-link">
-                                                        <span className="item-wrapper">
-                                                            <span className="item-inner">
-                                                                <span className="item-text">
-                                                                    Standart
+                                                    <div
+                                                        className={
+                                                            classes.subMenuLink
+                                                        }
+                                                    >
+                                                        <span
+                                                            className={
+                                                                classes.itemWrapper
+                                                            }
+                                                        >
+                                                            <span
+                                                                className={
+                                                                    classes.itemInner
+                                                                }
+                                                            >
+                                                                <span
+                                                                    className={
+                                                                        classes.itemText
+                                                                    }
+                                                                >
+                                                                    Living
                                                                 </span>
-                                                                <span className="hover-text">
-                                                                    Standart
+                                                                <span
+                                                                    className={
+                                                                        classes.hoverText
+                                                                    }
+                                                                >
+                                                                    Living
                                                                 </span>
                                                             </span>
                                                         </span>
                                                     </div>
                                                 </li>
-                                                <li><div className="sub-menu-no-link">
-                                                    <span className="item-wrapper">
-                                                        <span className="item-inner">
-                                                            <span className="item-text">
-                                                                Without Sidebar
-                                                            </span>
-                                                            <span className="hover-text">
-                                                                Without Sidebar
-                                                            </span>
-                                                        </span>
-                                                    </span>
-                                                </div></li>
-                                                <li><div className="sub-menu-no-link">
-                                                    <span className="item-wrapper">
-                                                        <span className="item-inner">
-                                                            <span className="item-text">
-                                                                Slider Gallery
-                                                            </span>
-                                                            <span className="hover-text">
-                                                                Slider Gallery
-                                                            </span>
-                                                        </span>
-                                                    </span>
-                                                </div></li>
-                                                <li><div className="sub-menu-no-link">
-                                                    <span className="item-wrapper">
-                                                        <span className="item-inner">
-                                                            <span className="item-text">
-                                                                Gallery
-                                                            </span>
-                                                            <span className="hover-text">
-                                                                Gallery
+                                                <li>
+                                                    <div
+                                                        className={
+                                                            classes.subMenuLink
+                                                        }
+                                                    >
+                                                        <span
+                                                            className={
+                                                                classes.itemWrapper
+                                                            }
+                                                        >
+                                                            <span
+                                                                className={
+                                                                    classes.itemInner
+                                                                }
+                                                            >
+                                                                <span
+                                                                    className={
+                                                                        classes.itemText
+                                                                    }
+                                                                >
+                                                                    Culture
+                                                                </span>
+                                                                <span
+                                                                    className={
+                                                                        classes.hoverText
+                                                                    }
+                                                                >
+                                                                    Culture
+                                                                </span>
                                                             </span>
                                                         </span>
-                                                    </span>
-                                                </div></li>
-                                                <li><div className="sub-menu-no-link">
-                                                    <span className="item-wrapper">
-                                                        <span className="item-inner">
-                                                            <span className="item-text">
-                                                                Link
-                                                            </span>
-                                                            <span className="hover-text">
-                                                                Link
-                                                            </span>
-                                                        </span>
-                                                    </span>
-                                                </div></li>
-                                                <li><div className="sub-menu-no-link">
-                                                    <span className="item-wrapper">
-                                                        <span className="item-inner">
-                                                            <span className="item-text">
-                                                                Quote
-                                                            </span>
-                                                            <span className="hover-text">
-                                                                Quote
-                                                            </span>
-                                                        </span>
-                                                    </span>
-                                                </div></li>
-                                                <li><div className="sub-menu-no-link">
-                                                    <span className="item-wrapper">
-                                                        <span className="item-inner">
-                                                            <span className="item-text">
-                                                                Audio
-                                                            </span>
-                                                            <span className="hover-text">
-                                                                Audio
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div
+                                                        className={
+                                                            classes.subMenuLink
+                                                        }
+                                                    >
+                                                        <span
+                                                            className={
+                                                                classes.itemWrapper
+                                                            }
+                                                        >
+                                                            <span
+                                                                className={
+                                                                    classes.itemInner
+                                                                }
+                                                            >
+                                                                <span
+                                                                    className={
+                                                                        classes.itemText
+                                                                    }
+                                                                >
+                                                                    Advice
+                                                                </span>
+                                                                <span
+                                                                    className={
+                                                                        classes.hoverText
+                                                                    }
+                                                                >
+                                                                    Advice
+                                                                </span>
                                                             </span>
                                                         </span>
-                                                    </span>
-                                                </div></li>
-                                                <li><div className="sub-menu-no-link">
-                                                    <span className="item-wrapper">
-                                                        <span className="item-inner">
-                                                            <span className="item-text">
-                                                                Video
-                                                            </span>
-                                                            <span className="hover-text">
-                                                                Video
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div
+                                                        className={
+                                                            classes.subMenuLink
+                                                        }
+                                                    >
+                                                        <span
+                                                            className={
+                                                                classes.itemWrapper
+                                                            }
+                                                        >
+                                                            <span
+                                                                className={
+                                                                    classes.itemInner
+                                                                }
+                                                            >
+                                                                <span
+                                                                    className={
+                                                                        classes.itemText
+                                                                    }
+                                                                >
+                                                                    Events
+                                                                </span>
+                                                                <span
+                                                                    className={
+                                                                        classes.hoverText
+                                                                    }
+                                                                >
+                                                                    Events
+                                                                </span>
                                                             </span>
                                                         </span>
-                                                    </span>
-                                                </div></li>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div
+                                                        className={
+                                                            classes.subMenuLink
+                                                        }
+                                                    >
+                                                        <span
+                                                            className={
+                                                                classes.itemWrapper
+                                                            }
+                                                        >
+                                                            <span
+                                                                className={
+                                                                    classes.itemInner
+                                                                }
+                                                            >
+                                                                <span
+                                                                    className={
+                                                                        classes.itemText
+                                                                    }
+                                                                >
+                                                                    Life Style
+                                                                </span>
+                                                                <span
+                                                                    className={
+                                                                        classes.hoverText
+                                                                    }
+                                                                >
+                                                                    Life Style
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div
+                                                        className={
+                                                            classes.subMenuLink
+                                                        }
+                                                    >
+                                                        <span
+                                                            className={
+                                                                classes.itemWrapper
+                                                            }
+                                                        >
+                                                            <span
+                                                                className={
+                                                                    classes.itemInner
+                                                                }
+                                                            >
+                                                                <span
+                                                                    className={
+                                                                        classes.itemText
+                                                                    }
+                                                                >
+                                                                    Travel
+                                                                </span>
+                                                                <span
+                                                                    className={
+                                                                        classes.hoverText
+                                                                    }
+                                                                >
+                                                                    Travel
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style={{
+                                            display: `${displaySubMenu}`,
+                                        }}
+                                        className={classes.subMenuMobile}
+                                    >
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <div
+                                                        className={
+                                                            classes.subMenuLink
+                                                        }
+                                                    >
+                                                        <span
+                                                            className={
+                                                                classes.itemWrapper
+                                                            }
+                                                        >
+                                                            <span
+                                                                className={
+                                                                    classes.itemInner
+                                                                }
+                                                            >
+                                                                <span
+                                                                    className={
+                                                                        classes.itemText
+                                                                    }
+                                                                >
+                                                                    Living
+                                                                </span>
+                                                                <span
+                                                                    className={
+                                                                        classes.hoverText
+                                                                    }
+                                                                >
+                                                                    Living
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div
+                                                        className={
+                                                            classes.subMenuLink
+                                                        }
+                                                    >
+                                                        <span
+                                                            className={
+                                                                classes.itemWrapper
+                                                            }
+                                                        >
+                                                            <span
+                                                                className={
+                                                                    classes.itemInner
+                                                                }
+                                                            >
+                                                                <span
+                                                                    className={
+                                                                        classes.itemText
+                                                                    }
+                                                                >
+                                                                    Culture
+                                                                </span>
+                                                                <span
+                                                                    className={
+                                                                        classes.hoverText
+                                                                    }
+                                                                >
+                                                                    Culture
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div
+                                                        className={
+                                                            classes.subMenuLink
+                                                        }
+                                                    >
+                                                        <span
+                                                            className={
+                                                                classes.itemWrapper
+                                                            }
+                                                        >
+                                                            <span
+                                                                className={
+                                                                    classes.itemInner
+                                                                }
+                                                            >
+                                                                <span
+                                                                    className={
+                                                                        classes.itemText
+                                                                    }
+                                                                >
+                                                                    Advice
+                                                                </span>
+                                                                <span
+                                                                    className={
+                                                                        classes.hoverText
+                                                                    }
+                                                                >
+                                                                    Advice
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div
+                                                        className={
+                                                            classes.subMenuLink
+                                                        }
+                                                    >
+                                                        <span
+                                                            className={
+                                                                classes.itemWrapper
+                                                            }
+                                                        >
+                                                            <span
+                                                                className={
+                                                                    classes.itemInner
+                                                                }
+                                                            >
+                                                                <span
+                                                                    className={
+                                                                        classes.itemText
+                                                                    }
+                                                                >
+                                                                    Events
+                                                                </span>
+                                                                <span
+                                                                    className={
+                                                                        classes.hoverText
+                                                                    }
+                                                                >
+                                                                    Events
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div
+                                                        className={
+                                                            classes.subMenuLink
+                                                        }
+                                                    >
+                                                        <span
+                                                            className={
+                                                                classes.itemWrapper
+                                                            }
+                                                        >
+                                                            <span
+                                                                className={
+                                                                    classes.itemInner
+                                                                }
+                                                            >
+                                                                <span
+                                                                    className={
+                                                                        classes.itemText
+                                                                    }
+                                                                >
+                                                                    Life Style
+                                                                </span>
+                                                                <span
+                                                                    className={
+                                                                        classes.hoverText
+                                                                    }
+                                                                >
+                                                                    Life Style
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div
+                                                        className={
+                                                            classes.subMenuLink
+                                                        }
+                                                    >
+                                                        <span
+                                                            className={
+                                                                classes.itemWrapper
+                                                            }
+                                                        >
+                                                            <span
+                                                                className={
+                                                                    classes.itemInner
+                                                                }
+                                                            >
+                                                                <span
+                                                                    className={
+                                                                        classes.itemText
+                                                                    }
+                                                                >
+                                                                    Travel
+                                                                </span>
+                                                                <span
+                                                                    className={
+                                                                        classes.hoverText
+                                                                    }
+                                                                >
+                                                                    Travel
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
                                 </li>
                                 <li>
-                                    <div className="no-link">
-                                        <span className="item-wrapper">
-                                            <span className="item-inner">
-                                                <span className="item-text">
-                                                    Pages
+                                    <NavLink
+                                        to={''}
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? classes.activeMenuItem
+                                                : classes.menuItem
+                                        }
+                                    >
+                                        <span className={classes.itemWrapper}>
+                                            <span className={classes.itemInner}>
+                                                <span
+                                                    className={classes.itemText}
+                                                >
+                                                    Contact
                                                 </span>
-                                                <span className="hover-text">
-                                                    Pages
+                                                <span
+                                                    className={
+                                                        classes.hoverText
+                                                    }
+                                                >
+                                                    Contact
                                                 </span>
                                             </span>
                                         </span>
-                                    </div>
-                                    <div className="sub-menu">
-                                        <div className="wrapper">
-                                            <ul>
-                                                <li><div className="sub-menu-no-link">
-                                                    <span className="item-wrapper">
-                                                        <span className="item-inner">
-                                                            <span className="item-text">
-                                                                About
-                                                            </span>
-                                                            <span className="hover-text">
-                                                                About
-                                                            </span>
-                                                        </span>
-                                                    </span>
-                                                </div></li>
-                                                <li><div className="sub-menu-no-link">
-                                                    <span className="item-wrapper">
-                                                        <span className="item-inner">
-                                                            <span className="item-text">
-                                                                Contact
-                                                            </span>
-                                                            <span className="hover-text">
-                                                                Contact
-                                                            </span>
-                                                        </span>
-                                                    </span>
-                                                </div></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="no-link">
-                                        <div className="item-wrapper">
-                                            <span className="item-inner">
-                                                <span className="item-text">
-                                                    Categories
-                                                </span>
-                                                <span className="hover-text">Categories</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div className="sub-menu">
-                                        <div className="wrapper">
-                                            <ul>
-                                                <li><div className="sub-menu-no-link">
-                                                    <span className="item-wrapper">
-                                                        <span className="item-inner">
-                                                            <span className="item-text">
-                                                                Living
-                                                            </span>
-                                                            <span className="hover-text">
-                                                                Living
-                                                            </span>
-                                                        </span>
-                                                    </span>
-                                                </div></li>
-                                                <li><div className="sub-menu-no-link">
-                                                    <span className="item-wrapper">
-                                                        <span className="item-inner">
-                                                            <span className="item-text">
-                                                                Culture
-                                                            </span>
-                                                            <span className="hover-text">
-                                                                Culture
-                                                            </span>
-                                                        </span>
-                                                    </span>
-                                                </div></li>
-                                                <li><div className="sub-menu-no-link">
-                                                    <span className="item-wrapper">
-                                                        <span className="item-inner">
-                                                            <span className="item-text">
-                                                                Advice
-                                                            </span>
-                                                            <span className="hover-text">
-                                                                Advice
-                                                            </span>
-                                                        </span>
-                                                    </span>
-                                                </div></li>
-                                                <li><div className="sub-menu-no-link">
-                                                    <span className="item-wrapper">
-                                                        <span className="item-inner">
-                                                            <span className="item-text">
-                                                                Events
-                                                            </span>
-                                                            <span className="hover-text">
-                                                                Events
-                                                            </span>
-                                                        </span>
-                                                    </span>
-                                                </div></li>
-                                                <li><div className="sub-menu-no-link">
-                                                    <span className="item-wrapper">
-                                                        <span className="item-inner">
-                                                            <span className="item-text">
-                                                                Life Style
-                                                            </span>
-                                                            <span className="hover-text">
-                                                                Life Style
-                                                            </span>
-                                                        </span>
-                                                    </span>
-                                                </div></li>
-                                                <li><div className="sub-menu-no-link">
-                                                    <span className="item-wrapper">
-                                                        <span className="item-inner">
-                                                            <span className="item-text">
-                                                                Travel
-                                                            </span>
-                                                            <span className="hover-text">
-                                                                Travel
-                                                            </span>
-                                                        </span>
-                                                    </span>
-                                                </div></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    </NavLink>
                                 </li>
                             </ul>
                         </nav>

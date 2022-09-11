@@ -1,11 +1,6 @@
-
-.grid {
-    padding: 0px 25px;
-}
 .logo-area {
     position: relative;
     top: 0;
-    padding-right: 10px;
     padding-bottom: 50px;
     background-color: #fff;
     .top-bar {
@@ -28,13 +23,13 @@
                         }
                     }
                     .icon-twitter {
-                        background: url(/public/images/icon-twitter.svg) center no-repeat;
+                        background: url(../../../public/images/icon-twitter.svg) center no-repeat;
                     }
                     .icon-pinterest {
-                        background: url(/public/images/icon-pinterest.svg) center no-repeat;
+                        background: url(../../../public/images/icon-pinterest.svg) center no-repeat;
                     }
                     .icon-vimeo {
-                        background: url(/public/images/icon-vimeo.svg) center no-repeat;
+                        background: url(../../../public/images/icon-vimeo.svg) center no-repeat;
                     }
                 }
             }
@@ -51,10 +46,10 @@
                 cursor: pointer;
             }
             .icon-menu {
-                background: url(/public/images/icon-burger.svg) center no-repeat;
+                background: url(../../../public/images/icon-burger.svg) center no-repeat;
             }
             .icon-search {
-                background: url(/public/images/icon-search.svg) center no-repeat;
+                background: url(../../../public/images/icon-search.svg) center no-repeat;
             }
         }
     }
@@ -62,10 +57,61 @@
         text-align: center; 
         .logo {
             cursor: pointer;
-            height: 122px;
+            display: block;
             img {
                 max-width: 100%;
                 max-height: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 599.98px) {
+    .top-bar {
+        .left-elements {
+            .icon-top-bar {
+                display: none;
+            }
+        }
+        .right-elements {
+            .search, .menu-opened {
+                display: none;
+            }
+        }
+    }
+    .logo-wrapper {
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .logo-area {
+        .logo-wrapper {
+            .logo {
+                height: 80px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .logo-area {
+        .logo-wrapper {
+            .logo {
+                height: 100px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+    .logo-area {
+        .logo-wrapper {
+            .logo {
+                height: 122px;
             }
         }
     }
