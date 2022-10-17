@@ -1,13 +1,11 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import classes from './Menu.module.scss'
-type Props = {}
 
-const Menu = (props: Props) => {
+const Menu = () => {
     const [displayMenu, setDisplayMenu] = useState<string>('none')
     const [displaySubMenu, setDisplaySubMenu] = useState<string>('none')
     const [activeMenuItem, setActiveMenuItem] = useState<string>('')
-    const [inActiveMenuItem, setInActiveMenuItem] = useState<string>('')
 
     const toggleOpenMenu = () =>
         setDisplayMenu((prevState: string) =>
@@ -18,11 +16,9 @@ const Menu = (props: Props) => {
             prevState === 'none' ? 'block' : 'none'
         )
     const clickSubMenuItem = () =>
-        setActiveMenuItem(
-            (prevState: string) => (prevState = 'rgb(255, 255, 255)')
+        setActiveMenuItem((prevState: string) =>
+            prevState === '' ? 'rgb(255, 255, 255)' : '#959595'
         )
-    const clickMenuItem = () =>
-        setActiveMenuItem((prevState: string) => (prevState = '#959595'))
     return (
         <>
             <div className={classes.menuArea}>
@@ -53,7 +49,7 @@ const Menu = (props: Props) => {
                     >
                         <li>
                             <NavLink
-                                onClick={clickMenuItem}
+                                onClick={clickSubMenuItem}
                                 to="/"
                                 className={({ isActive }) =>
                                     isActive
@@ -75,7 +71,7 @@ const Menu = (props: Props) => {
                         </li>
                         <li>
                             <NavLink
-                                onClick={clickMenuItem}
+                                onClick={clickSubMenuItem}
                                 to="/about"
                                 className={({ isActive }) =>
                                     isActive
@@ -101,7 +97,7 @@ const Menu = (props: Props) => {
                                     <span className={classes.itemInner}>
                                         <span
                                             style={{
-                                                color: `${activeMenuItem} ${inActiveMenuItem}`,
+                                                color: `${activeMenuItem} `,
                                             }}
                                             className={classes.itemText}
                                         >
@@ -482,7 +478,7 @@ const Menu = (props: Props) => {
                         </li>
                         <li>
                             <NavLink
-                                onClick={clickMenuItem}
+                                onClick={clickSubMenuItem}
                                 to="favorite"
                                 className={({ isActive }) =>
                                     isActive

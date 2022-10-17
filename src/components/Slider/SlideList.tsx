@@ -1,7 +1,7 @@
-// import slidesArray from './slidesArray'
 import articlesArray from 'components/Articles/articlesArray'
 import SlidesListItem from './SlidesListItem'
 import Slider from 'react-slick'
+import './SlideList.scss'
 type SlidePrors = {
     id: number
     name1: string
