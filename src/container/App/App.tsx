@@ -3,6 +3,7 @@ import Header from '../Header/Header'
 import Main from '../Main/Main'
 import './App.scss'
 import { omit } from 'lodash'
+import Footer from 'container/Footer/Footer'
 
 type PostsFavoriteProps = {
     [id: number]: number
@@ -53,6 +54,7 @@ const App = () => {
                 postsInFavorite={postsInFavorite}
                 showArticlePage={showArticlePage}
             />
+            <Footer />
         </>
     )
 }
