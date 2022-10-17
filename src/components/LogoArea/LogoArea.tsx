@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import './LogoAreaa.scss'
 
 type Props = {}
@@ -8,37 +8,10 @@ const LogoArea = (props: Props) => {
         <>
             <div className="logo-area">
                 <div className="grid">
-                    <div className="top-bar">
-                        <div className="left-elements">
-                            <div className="icon-top-bar">
-                                <a href="" className="link-social">
-                                    <span className="icon-twitter"></span>
-                                </a>
-                            </div>
-                            <div className="icon-top-bar">
-                                <a href="" className="link-social">
-                                    <span className="icon-pinterest"></span>
-                                </a>
-                            </div>
-                            <div className="icon-top-bar">
-                                <a href="" className="link-social">
-                                    <span className="icon-vimeo"></span>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="right-elements">
-                            <div className="search">
-                                <span className="icon-search"></span>
-                            </div>
-                            <div className="menu-opened">
-                                <span className="icon-menu"></span>
-                            </div>
-                        </div>
-                    </div>
                     <div className="logo-wrapper">
-                        <a className="logo">
-                            <img src="/images/allure-logo.png" alt="" />
-                        </a>
+                        <Link to="/" className="logo">
+                            <img src="/images/header/allure-logo.png" alt="" />
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,22 @@
+.wrapper {
+    background-color: #fff;
+}
+
+.title-bg {
+    background-image: url('../../../public/images/main/title-background.jpg');
+    display: block;
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    padding: 35px 0;
+    text-align: center;
+    .title {
+        font-size: 40px;
+        font-weight:normal;
+        text-transform: uppercase;
+        vertical-align: middle;
+    }
+}
+.pages-content {
+    padding: 38px 0 80px;
+}

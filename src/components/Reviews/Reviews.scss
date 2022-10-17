@@ -1,0 +1,73 @@
+.title-comments {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.card-comments-posted {
+    margin-bottom: 16px;
+    .card-comments {
+        .comments-name {
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            background-color: rgba($color: #b9b5b5, $alpha: .2);
+            display: inline-block;
+            padding: 5px;
+        }
+        .comments-text {
+            line-height: 26px;
+            font-style: italic;
+            font-size: 16.3px;
+        }
+    }
+}
+.card-leave-comments {
+    display: block;
+    text-align: center;
+    .card-content {
+        form {
+            input, textarea {
+                margin-bottom: 15px;
+                padding: 10px 15px;
+                border: 1px solid #d8d8d8;
+                outline: 0;
+                font-family: inherit;
+                font-size: 13px;
+                background-color: transparent;
+                color: #989898;
+                box-sizing: border-box;
+                transition: border .3s ease-in-out;
+            }
+            textarea {
+                height: 220px;
+            }
+            button {
+                display: inline-block;
+                width: auto;
+                height: 40px;
+                line-height: 38px;
+                padding: 0 20px;
+                text-transform: uppercase;
+                transition: all .15s ease-out;
+                border: 1px solid #000;
+                font-size: 11px;
+                color: #fff;
+                background-color: #000;
+                cursor: pointer;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    input, textarea {
+        width: 75%;
+    }
+}
+@media (min-width: 768px) {
+    input, textarea {
+        width: 50%;
+    }
+}

@@ -1,3 +1,5 @@
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,18 +7,31 @@
 }
 
 body {
-    background: url(../../../public/images/body-bg.jpg);
+    background: url(../../../public/images/header/body-bg.jpg);
+    // font-family: 'Noto Serif', serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .container {
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px 0 15px;
     margin: 0 auto;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
 .grid {
-    padding: 0px 25px;
+    margin: 0px 25px;
+}
+
+@media (max-width: 767.98px) {
+    .grid {
+        margin: 0 10px;
+    }
 }
 
 @media (min-width: 768px) {

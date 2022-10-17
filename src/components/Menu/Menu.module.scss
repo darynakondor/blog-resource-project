@@ -3,6 +3,8 @@
 .menuArea {
     background-color: black;
     position: sticky;
+    top: 0;
+    z-index: 1000;
     .headerMenu {
         .upperMenu {
             font-family: 'Arimo', sans-serif;
@@ -13,18 +15,12 @@
                 text-align: center;
                 list-style: none;
                 position: relative;
-                .menuItem {
-                    color: #fff;
-                }
-                .activeMenuItem,
-                .subMenuLink {
+                .menuItem,
+                .subMenuLink, .activeMenuItem {
                     font-weight: 400;
                     font-size: 12px;
                     letter-spacing: 1px;
-                    text-decoration: none;
-                    &:hover {
-                        color: #fff;
-                    }
+                    display: block;
                     cursor: pointer;
                     .itemWrapper {
                         padding: 0px 19px;
@@ -32,10 +28,6 @@
                             position: relative;
                             &:hover .hoverText {
                                 width: 100%;
-                            }
-                            .itemText {
-                                color: #959595;
-                                white-space: nowrap;
                             }
                             .hoverText {
                                 color: #fff;
@@ -50,7 +42,17 @@
                         }
                     }
                 }
+                .menuItem, .subMenuLink {
+                    .itemText {
+                        color: #959595;
+                    }
+                }
                 .activeMenuItem {
+                    .itemText {
+                        color: rgb(255, 255, 255);
+                    }
+                }
+                .activeMenuItem, .menuItem {
                     .itemText {
                         line-height: 50px;
                     }
@@ -93,9 +95,10 @@
             .upperMenu {
                 li {
                     background-color: black;
-                    .activeMenuItem {
+                    .menuItem {
                         .itemText {
                             position: relative; 
+                            color: rgb(255, 255, 255);
                             .biChevronDown {
                                 position: absolute;
                                 top: 0;
@@ -113,6 +116,7 @@
                                 .itemInner {
                                     .itemText {
                                         line-height: 50px;
+                                        color: rgb(206, 206, 206);
                                     }
                                 }
                             }
@@ -146,7 +150,7 @@
                     .activeMenuItem {
                         color: #fff;
                     }
-                    .activeMenuItem {
+                    .activeMenuItem, .menuItem {
                         .biChevronDown {
                             display: none;
                         }
@@ -156,7 +160,7 @@
                         ul {
                             padding: 15px 0px;
                             padding-right: 90px;
-                            background: url(../../../public/images/dropdown-back.jpg);
+                            background: url(../../../public/images/header/dropdown-back.jpg);
                             li {
                                 text-align: left;
                                 .subMenuLink {
