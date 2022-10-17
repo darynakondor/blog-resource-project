@@ -2,8 +2,6 @@
 import articlesArray from 'components/Articles/articlesArray'
 import SlidesListItem from './SlidesListItem'
 import Slider from 'react-slick'
-import './SlideList.scss'
-import { type } from 'os'
 type SlidePrors = {
     id: number
     name1: string
