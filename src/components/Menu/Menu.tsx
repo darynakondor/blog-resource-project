@@ -7,18 +7,21 @@ const Menu = () => {
     const [displaySubMenu, setDisplaySubMenu] = useState<string>('none')
     const [activeMenuItem, setActiveMenuItem] = useState<string>('')
 
-    const toggleOpenMenu = () =>
+    const toggleOpenMenu = () => {
         setDisplayMenu((prevState: string) =>
             prevState === 'none' ? 'block' : 'none'
         )
+    }
     const toggleSubMenu = () =>
         setDisplaySubMenu((prevState: string) =>
             prevState === 'none' ? 'block' : 'none'
         )
     const clickSubMenuItem = () =>
-        setActiveMenuItem((prevState: string) =>
-            prevState === '' ? 'rgb(255, 255, 255)' : '#959595'
+        setActiveMenuItem(
+            (prevState: string) => (prevState = 'rgb(255, 255, 255)')
         )
+    const clickMenuItem = () =>
+        setActiveMenuItem((prevState: string) => (prevState = '#959595'))
     return (
         <>
             <div className={classes.menuArea}>
@@ -42,14 +45,14 @@ const Menu = () => {
                 </div>
                 <nav className={classes.headerMenu}>
                     <ul
-                        className={classes.upperMenu}
                         style={{
                             display: `${displayMenu}`,
                         }}
+                        className={classes.upperMenu}
                     >
                         <li>
                             <NavLink
-                                onClick={clickSubMenuItem}
+                                onClick={clickMenuItem}
                                 to="/"
                                 className={({ isActive }) =>
                                     isActive
@@ -57,7 +60,10 @@ const Menu = () => {
                                         : classes.menuItem
                                 }
                             >
-                                <span className={classes.itemWrapper}>
+                                <span
+                                    onClick={toggleOpenMenu}
+                                    className={classes.itemWrapper}
+                                >
                                     <span className={classes.itemInner}>
                                         <span className={classes.itemText}>
                                             Home
@@ -71,7 +77,7 @@ const Menu = () => {
                         </li>
                         <li>
                             <NavLink
-                                onClick={clickSubMenuItem}
+                                onClick={clickMenuItem}
                                 to="/about"
                                 className={({ isActive }) =>
                                     isActive
@@ -79,7 +85,10 @@ const Menu = () => {
                                         : classes.menuItem
                                 }
                             >
-                                <span className={classes.itemWrapper}>
+                                <span
+                                    onClick={toggleOpenMenu}
+                                    className={classes.itemWrapper}
+                                >
                                     <span className={classes.itemInner}>
                                         <span className={classes.itemText}>
                                             About
@@ -93,7 +102,7 @@ const Menu = () => {
                         </li>
                         <li onClick={toggleSubMenu}>
                             <NavLink to="#" className={classes.menuItem}>
-                                <div className={classes.itemWrapper}>
+                                <span className={classes.itemWrapper}>
                                     <span className={classes.itemInner}>
                                         <span
                                             style={{
@@ -122,7 +131,7 @@ const Menu = () => {
                                             Categories
                                         </span>
                                     </span>
-                                </div>
+                                </span>
                             </NavLink>
                             <div className={classes.subMenu}>
                                 <div>
@@ -165,6 +174,9 @@ const Menu = () => {
                                         </li>
                                         <li>
                                             <NavLink
+                                                onClick={() =>
+                                                    clickSubMenuItem()
+                                                }
                                                 to="category/culture"
                                                 className={classes.subMenuLink}
                                             >
@@ -198,6 +210,9 @@ const Menu = () => {
                                         </li>
                                         <li>
                                             <NavLink
+                                                onClick={() =>
+                                                    clickSubMenuItem()
+                                                }
                                                 to="category/events"
                                                 className={classes.subMenuLink}
                                             >
@@ -231,6 +246,9 @@ const Menu = () => {
                                         </li>
                                         <li>
                                             <NavLink
+                                                onClick={() =>
+                                                    clickSubMenuItem()
+                                                }
                                                 to="category/lifestyle"
                                                 className={classes.subMenuLink}
                                             >
@@ -264,6 +282,9 @@ const Menu = () => {
                                         </li>
                                         <li>
                                             <NavLink
+                                                onClick={() =>
+                                                    clickSubMenuItem()
+                                                }
                                                 to="category/travel"
                                                 className={classes.subMenuLink}
                                             >
@@ -312,6 +333,7 @@ const Menu = () => {
                                                 className={classes.subMenuLink}
                                             >
                                                 <span
+                                                    onClick={toggleOpenMenu}
                                                     className={
                                                         classes.itemWrapper
                                                     }
@@ -345,6 +367,7 @@ const Menu = () => {
                                                 className={classes.subMenuLink}
                                             >
                                                 <span
+                                                    onClick={toggleOpenMenu}
                                                     className={
                                                         classes.itemWrapper
                                                     }
@@ -379,6 +402,7 @@ const Menu = () => {
                                                 className={classes.subMenuLink}
                                             >
                                                 <span
+                                                    onClick={toggleOpenMenu}
                                                     className={
                                                         classes.itemWrapper
                                                     }
@@ -412,6 +436,7 @@ const Menu = () => {
                                                 className={classes.subMenuLink}
                                             >
                                                 <span
+                                                    onClick={toggleOpenMenu}
                                                     className={
                                                         classes.itemWrapper
                                                     }
@@ -445,6 +470,7 @@ const Menu = () => {
                                                 className={classes.subMenuLink}
                                             >
                                                 <span
+                                                    onClick={toggleOpenMenu}
                                                     className={
                                                         classes.itemWrapper
                                                     }
@@ -478,7 +504,7 @@ const Menu = () => {
                         </li>
                         <li>
                             <NavLink
-                                onClick={clickSubMenuItem}
+                                onClick={clickMenuItem}
                                 to="favorite"
                                 className={({ isActive }) =>
                                     isActive
@@ -486,7 +512,10 @@ const Menu = () => {
                                         : classes.menuItem
                                 }
                             >
-                                <span className={classes.itemWrapper}>
+                                <span
+                                    onClick={toggleOpenMenu}
+                                    className={classes.itemWrapper}
+                                >
                                     <span className={classes.itemInner}>
                                         <span className={classes.itemText}>
                                             Favorite

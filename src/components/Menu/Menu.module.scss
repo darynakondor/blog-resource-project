@@ -8,8 +8,6 @@
     .headerMenu {
         .upperMenu {
             font-family: 'Arimo', sans-serif;
-            display: flex;
-            justify-content: center;
             text-transform: uppercase;
             li {
                 text-align: center;
@@ -92,13 +90,14 @@
             position: absolute;
             left: 0;
             right: 0;
+            
             .upperMenu {
                 li {
                     background-color: black;
                     .menuItem {
                         .itemText {
                             position: relative; 
-                            color: rgb(255, 255, 255);
+                            color: rgb(255, 255, 255) !important;
                             .biChevronDown {
                                 position: absolute;
                                 top: 0;
@@ -139,6 +138,7 @@
         .headerMenu {
             .upperMenu {
                 display: flex !important;
+                justify-content: center;
                 height: 50px;
                 li {
                     &:hover .subMenu {

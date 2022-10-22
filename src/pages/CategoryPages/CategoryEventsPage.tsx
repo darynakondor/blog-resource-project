@@ -33,11 +33,11 @@ const CategoryEventsPage = ({
         gridTemplateColumns: '1fr',
     }
     return (
-        <section className="section-article grid " style={{ paddingTop: '0' }}>
-            <div style={style} className="article-wrapper">
-                <div className="title-bg">
-                    <h1 className="title">Events</h1>
-                </div>
+        <section className="section-article" style={{ paddingTop: '0' }}>
+            <div className="title-bg">
+                <h1 className="title">Events</h1>
+            </div>
+            <div style={style} className="article-wrapper grid pages-content">
                 {articlesArray
                     .filter(
                         ({ category }: CategoryProps) => category === 'events'

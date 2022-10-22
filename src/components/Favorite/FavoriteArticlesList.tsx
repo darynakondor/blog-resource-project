@@ -4,7 +4,6 @@ import articlesArray, {
     Article,
 } from '../Articles/articlesArray'
 import FavoriteArticleListExtended from './FavoriteArticleListExtended'
-import './Favorite.scss'
 
 type Props = {
     toggleLiked: (id: number, isLiked: boolean) => void

@@ -84,31 +84,33 @@ const ArticleListItem = ({
                 </div>
                 <div className="post-description">
                     <div className="post-description__text">{text}</div>
-                    <Link
-                        onClick={() => showArticlePage(id)}
-                        to={`post/${id}`}
-                        className="post-description__link"
-                    >
-                        <span className="btn-continue-reading">
-                            Continue reading
-                            <span className="btn-continue-reading__hover">
+                    <div className="post-description__link-like">
+                        <Link
+                            onClick={() => showArticlePage(id)}
+                            to={`post/${id}`}
+                            className="link"
+                        >
+                            <span className="btn-continue-reading">
                                 Continue reading
+                                <span className="btn-continue-reading__hover">
+                                    Continue reading
+                                </span>
                             </span>
-                        </span>
-                    </Link>
-                    <div
-                        className="like"
-                        onClick={() => toggleLiked(id, isLiked)}
-                    >
-                        {isLiked ? (
-                            <div onClick={() => removePostFromFavorite(id)}>
-                                <MdFavorite />
-                            </div>
-                        ) : (
-                            <div onClick={() => addPostToFavorite(id)}>
-                                <MdFavoriteBorder />
-                            </div>
-                        )}
+                        </Link>
+                        <div
+                            className="like"
+                            onClick={() => toggleLiked(id, isLiked)}
+                        >
+                            {isLiked ? (
+                                <div onClick={() => removePostFromFavorite(id)}>
+                                    <MdFavorite />
+                                </div>
+                            ) : (
+                                <div onClick={() => addPostToFavorite(id)}>
+                                    <MdFavoriteBorder />
+                                </div>
+                            )}
+                        </div>
                     </div>
                     <div className="post-description__comments">
                         <div className="comments">

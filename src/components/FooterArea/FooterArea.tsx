@@ -1,4 +1,4 @@
-import './Footerarea.scss'
+import './FooterArea.scss'
 const FooterArea = () => {
     return (
         <div>

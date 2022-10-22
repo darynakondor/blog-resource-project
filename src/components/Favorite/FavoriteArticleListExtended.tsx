@@ -64,34 +64,37 @@ const FavoriteArticleListExtended = ({
                         <div className="post-description__text">
                             {post.text}
                         </div>
-                        <Link
-                            to={`post/${post.id}`}
-                            className="post-description__link"
-                        >
-                            <span className="btn-continue-reading">
-                                Continue reading
-                                <span className="btn-continue-reading__hover">
+                        <div className="post-description__link-like">
+                            <Link to={`post/${post.id}`} className="link">
+                                <span className="btn-continue-reading">
                                     Continue reading
+                                    <span className="btn-continue-reading__hover">
+                                        Continue reading
+                                    </span>
                                 </span>
-                            </span>
-                        </Link>
-                        <div
-                            className="like"
-                            onClick={() => toggleLiked(post.id, isLiked)}
-                        >
-                            {isLiked ? (
-                                <div
-                                    onClick={() =>
-                                        removePostFromFavorite(post.id)
-                                    }
-                                >
-                                    <MdFavorite />
-                                </div>
-                            ) : (
-                                <div onClick={() => addPostToFavorite(post.id)}>
-                                    <MdFavoriteBorder />
-                                </div>
-                            )}
+                            </Link>
+                            <div
+                                className="like"
+                                onClick={() => toggleLiked(post.id, isLiked)}
+                            >
+                                {isLiked ? (
+                                    <div
+                                        onClick={() =>
+                                            removePostFromFavorite(post.id)
+                                        }
+                                    >
+                                        <MdFavorite />
+                                    </div>
+                                ) : (
+                                    <div
+                                        onClick={() =>
+                                            addPostToFavorite(post.id)
+                                        }
+                                    >
+                                        <MdFavoriteBorder />
+                                    </div>
+                                )}
+                            </div>
                         </div>
 
                         <div className="post-description__comments">

@@ -122,47 +122,54 @@
                     .post-description__text {
                         margin: 15px 0 23px;
                     }
-                    .post-description__link {
-                        background-color: #000;
-                        border: 1px solid #000;
-                        letter-spacing: 1px;
-                        position: relative;
-                        outline: 0;
-                        font-style: normal;
-                        font-weight: 700;
-                        padding: 9px 15px;
-                        font-size: 12px;
-                        line-height: 1.7em;
-                        display:  inline-block !important;
-                        width: 170px;
-                        text-transform: uppercase;
-                        &:hover .btn-continue-reading__hover {
-                            width: 100%;
-                            transition: 0.5s all ease-in-out;
-                        }
-                        .btn-continue-reading {
+                    .post-description__link-like {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        align-items: center;
+                        justify-content: right;
+                        .link {
+                            background-color: #000;
+                            border: 1px solid #000;
+                            letter-spacing: 1px;
                             position: relative;
-                            display: inline-block;
-                            vertical-align: middle;
-                            color: rgb(237, 236, 236);
+                            outline: 0;
+                            font-style: normal;
+                            font-weight: 700;
+                            padding: 9px 15px;
+                            font-size: 12px;
+                            line-height: 1.7em;
+                            display:  block;
+                            width: 170px;
+                            text-transform: uppercase;
+                            &:hover .btn-continue-reading__hover {
+                                width: 100%;
+                                transition: 0.5s all ease-in-out;
+                            }
+                            .btn-continue-reading {
+                                position: relative;
+                                display: inline-block;
+                                vertical-align: middle;
+                                color: rgb(237, 236, 236);
+                            }
+                            .btn-continue-reading__hover {
+                                color: rgb(255, 255, 255);
+                                white-space: nowrap;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                overflow: hidden;
+                                width: 0;
+                                transition: width 0.5s;
+                            }
                         }
-                        .btn-continue-reading__hover {
-                            color: rgb(255, 255, 255);
-                            white-space: nowrap;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            overflow: hidden;
-                            width: 0;
-                            transition: width 0.5s;
-                        }
-                    }
-                    .like {
-                        display: inline-block;
-                        vertical-align: middle;
-                        svg {
-                            width: 25px;
-                            height: 25px;
+                        .like {
+                            display: block;
+                            cursor: pointer;
+                            text-align:right;
+                            svg {
+                                width: 25px;
+                                height: 25px;
+                            }
                         }
                     }
                     .post-description__comments {
@@ -220,10 +227,6 @@
     .post-title {
         font-size: 24.5px;
     }
-    
-    .like {
-        margin-left: calc(60px + (450 - 60) * ((100vw - 320px) / (768 - 320)));
-    }
 }
 
 @media (min-width: 768px) {
@@ -234,9 +237,6 @@
     .post-title {
         font-size: 24.5px;
     }
-    .like {
-        margin-left: 95px;
-    }
 }
 @media (min-width: 992px) {
     .article-wrapper {
@@ -245,15 +245,9 @@
     .post-title {
         font-size: 24.5px;
     }
-    .like {
-        margin-left: 75px;
-    }
 }
 @media (min-width: 1200px) {
     .post-title {
         font-size: 30px;
-    }
-    .like {
-        margin-left: 135px;
     }
 }
