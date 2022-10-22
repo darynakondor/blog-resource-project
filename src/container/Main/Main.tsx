@@ -12,6 +12,7 @@ import FavoritePage from 'pages/FavoritePage/FavoritePage'
 import ArticlePage from 'pages/ArticlePage/ArticlePage'
 
 type Props = {
+    goToPagrCategory?: string
     addPostToFavorite: (id: number) => void
     removePostFromFavorite: (id: number) => void
     postsInFavorite: {
