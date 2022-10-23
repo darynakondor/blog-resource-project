@@ -25,7 +25,7 @@ const SpecificArticleExtended = ({ post }: Props) => {
                             <div className="post-category-author">
                                 <div className="post-author">
                                     by{' '}
-                                    <Link to="about" className="author-link">
+                                    <Link to="/about" className="author-link">
                                         {post.author}
                                     </Link>
                                 </div>
