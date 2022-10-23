@@ -1,9 +1,11 @@
+import ScrollToTop from 'components/ScrollToTop/ScrollToTop'
 import './AboutPage.scss'
 type Props = {}
 
 const AboutPage = (props: Props) => {
     return (
         <section className="about-me">
+            <ScrollToTop />
             <div className="about-me__title-wrapper title-bg">
                 <h1 className="title">About me</h1>
             </div>

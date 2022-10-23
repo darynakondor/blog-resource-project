@@ -6,6 +6,7 @@ import articlesArray, {
 import SpecificArticleListExtended from './SpecificArticleExtended'
 import './SpecificArticle.scss'
 import Reviews from 'components/Reviews/Reviews'
+import ScrollToTop from 'components/ScrollToTop/ScrollToTop'
 
 type Props = {
     postsInFavorite: {
@@ -24,6 +25,7 @@ const SpecificArticle = ({
 }: Props) => {
     return (
         <section className="section-article grid">
+            <ScrollToTop />
             <div className="article-wrapper article-item pages-content">
                 {keys(postsInFavorite).map((postId) => (
                     <ArticleItem

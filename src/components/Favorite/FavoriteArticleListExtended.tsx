@@ -31,7 +31,7 @@ const FavoriteArticleListExtended = ({
                         <div className="post-header__info">
                             <h3 className="post-title">
                                 <Link
-                                    to={`post/${post.id}`}
+                                    to={`/post/${post.id}`}
                                     className="title-link"
                                 >
                                     {post.name1} <i>{post.name2}</i>
@@ -40,7 +40,7 @@ const FavoriteArticleListExtended = ({
                             <div className="post-category-author">
                                 <div className="post-author">
                                     by{' '}
-                                    <Link to="about" className="author-link">
+                                    <Link to="/about" className="author-link">
                                         {post.author}
                                     </Link>
                                 </div>
@@ -56,7 +56,7 @@ const FavoriteArticleListExtended = ({
                         </div>
                     </div>
                     <div className="post-img">
-                        <Link to={`post/${post.id}`} className="img-link">
+                        <Link to={`/post/${post.id}`} className="img-link">
                             <img src={post.image} alt="" />
                         </Link>
                     </div>
@@ -65,7 +65,7 @@ const FavoriteArticleListExtended = ({
                             {post.text}
                         </div>
                         <div className="post-description__link-like">
-                            <Link to={`post/${post.id}`} className="link">
+                            <Link to={`/post/${post.id}`} className="link">
                                 <span className="btn-continue-reading">
                                     Continue reading
                                     <span className="btn-continue-reading__hover">

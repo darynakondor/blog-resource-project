@@ -49,7 +49,7 @@ const ArticleListItem = ({
                         <h3 className="post-title">
                             <Link
                                 onClick={() => showArticlePage(id)}
-                                to={`post/${id}`}
+                                to={`/post/${id}`}
                                 className="title-link"
                             >
                                 {name1} <i>{name2}</i>
@@ -58,7 +58,7 @@ const ArticleListItem = ({
                         <div className="post-category-author">
                             <div className="post-author">
                                 by{' '}
-                                <Link to="about" className="author-link">
+                                <Link to="/about" className="author-link">
                                     {author}
                                 </Link>
                             </div>
@@ -76,7 +76,7 @@ const ArticleListItem = ({
                 <div className="post-img">
                     <Link
                         onClick={() => showArticlePage(id)}
-                        to={`post/${id}`}
+                        to={`/post/${id}`}
                         className="img-link"
                     >
                         <img src={image} alt="" />
@@ -87,7 +87,7 @@ const ArticleListItem = ({
                     <div className="post-description__link-like">
                         <Link
                             onClick={() => showArticlePage(id)}
-                            to={`post/${id}`}
+                            to={`/post/${id}`}
                             className="link"
                         >
                             <span className="btn-continue-reading">

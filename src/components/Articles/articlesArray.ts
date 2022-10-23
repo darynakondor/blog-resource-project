@@ -28,7 +28,7 @@ const articlesArray: Article[] = [
         image: '/images/main/take-over-the-streets.jpg',
         text: 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit....',
         numberOfComments: 2,
-        goToPageCategory: 'category/lifestyle',
+        goToPageCategory: '/category/lifestyle',
         paragraphArticlePage_1:
             'orem ipsum dolor sit amet, lacus eu erat integer bibendum rutrum, sed arcu molestie, in quis ornare, rhoncus sceleris nam feugiat nibh leo. Ac suspendisse turpis posuere, cursus fames eu eget dolorem sapien. Eget cras urna nam, ultricies proin interdum facilisis arcu, eget sed quam enim nam, sit pede nonummy viverra dolor sed orci, nec feugiat donec phasellus. Arcu litora gravida, eget ac, magna in aut proin congue, ac at justo wisi. Adipiscing nam et ac at ipsum. Ac id sit pharetra lorem ultrices, cum erat arcu non urna amet sodales, mauris odio, vestibulum nulla quisque ac metus, quam nostra a qui.',
         paragraphArticlePage_2:
@@ -49,7 +49,7 @@ const articlesArray: Article[] = [
         image: '/images/main/know-what-matters.jpg',
         text: 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit....',
         numberOfComments: 2,
-        goToPageCategory: 'category/living',
+        goToPageCategory: '/category/living',
         paragraphArticlePage_1:
             'orem ipsum dolor sit amet, lacus eu erat integer bibendum rutrum, sed arcu molestie, in quis ornare, rhoncus sceleris nam feugiat nibh leo. Ac suspendisse turpis posuere, cursus fames eu eget dolorem sapien. Eget cras urna nam, ultricies proin interdum facilisis arcu, eget sed quam enim nam, sit pede nonummy viverra dolor sed orci, nec feugiat donec phasellus. Arcu litora gravida, eget ac, magna in aut proin congue, ac at justo wisi. Adipiscing nam et ac at ipsum. Ac id sit pharetra lorem ultrices, cum erat arcu non urna amet sodales, mauris odio, vestibulum nulla quisque ac metus, quam nostra a qui.',
         paragraphArticlePage_2:
@@ -70,7 +70,7 @@ const articlesArray: Article[] = [
         image: '/images/main/lifesaving-apps.jpg',
         text: 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit....',
         numberOfComments: 2,
-        goToPageCategory: 'category/lifestyle',
+        goToPageCategory: '/category/lifestyle',
         paragraphArticlePage_1:
             'orem ipsum dolor sit amet, lacus eu erat integer bibendum rutrum, sed arcu molestie, in quis ornare, rhoncus sceleris nam feugiat nibh leo. Ac suspendisse turpis posuere, cursus fames eu eget dolorem sapien. Eget cras urna nam, ultricies proin interdum facilisis arcu, eget sed quam enim nam, sit pede nonummy viverra dolor sed orci, nec feugiat donec phasellus. Arcu litora gravida, eget ac, magna in aut proin congue, ac at justo wisi. Adipiscing nam et ac at ipsum. Ac id sit pharetra lorem ultrices, cum erat arcu non urna amet sodales, mauris odio, vestibulum nulla quisque ac metus, quam nostra a qui.',
         paragraphArticlePage_2:
@@ -91,7 +91,7 @@ const articlesArray: Article[] = [
         image: '/images/main/spirit-of-adventure.jpg',
         text: 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit....',
         numberOfComments: 2,
-        goToPageCategory: 'category/events',
+        goToPageCategory: '/category/events',
         paragraphArticlePage_1:
             'orem ipsum dolor sit amet, lacus eu erat integer bibendum rutrum, sed arcu molestie, in quis ornare, rhoncus sceleris nam feugiat nibh leo. Ac suspendisse turpis posuere, cursus fames eu eget dolorem sapien. Eget cras urna nam, ultricies proin interdum facilisis arcu, eget sed quam enim nam, sit pede nonummy viverra dolor sed orci, nec feugiat donec phasellus. Arcu litora gravida, eget ac, magna in aut proin congue, ac at justo wisi. Adipiscing nam et ac at ipsum. Ac id sit pharetra lorem ultrices, cum erat arcu non urna amet sodales, mauris odio, vestibulum nulla quisque ac metus, quam nostra a qui.',
         paragraphArticlePage_2:
@@ -112,7 +112,7 @@ const articlesArray: Article[] = [
         image: '/images/main/work-from-home.jpg',
         text: 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit....',
         numberOfComments: 2,
-        goToPageCategory: 'category/events',
+        goToPageCategory: '/category/events',
         paragraphArticlePage_1:
             'orem ipsum dolor sit amet, lacus eu erat integer bibendum rutrum, sed arcu molestie, in quis ornare, rhoncus sceleris nam feugiat nibh leo. Ac suspendisse turpis posuere, cursus fames eu eget dolorem sapien. Eget cras urna nam, ultricies proin interdum facilisis arcu, eget sed quam enim nam, sit pede nonummy viverra dolor sed orci, nec feugiat donec phasellus. Arcu litora gravida, eget ac, magna in aut proin congue, ac at justo wisi. Adipiscing nam et ac at ipsum. Ac id sit pharetra lorem ultrices, cum erat arcu non urna amet sodales, mauris odio, vestibulum nulla quisque ac metus, quam nostra a qui.',
         paragraphArticlePage_2:
@@ -133,7 +133,7 @@ const articlesArray: Article[] = [
         image: '/images/main/winter-warmth.jpg',
         text: 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit....',
         numberOfComments: 2,
-        goToPageCategory: 'category/lifestyle',
+        goToPageCategory: '/category/lifestyle',
         paragraphArticlePage_1:
             'orem ipsum dolor sit amet, lacus eu erat integer bibendum rutrum, sed arcu molestie, in quis ornare, rhoncus sceleris nam feugiat nibh leo. Ac suspendisse turpis posuere, cursus fames eu eget dolorem sapien. Eget cras urna nam, ultricies proin interdum facilisis arcu, eget sed quam enim nam, sit pede nonummy viverra dolor sed orci, nec feugiat donec phasellus. Arcu litora gravida, eget ac, magna in aut proin congue, ac at justo wisi. Adipiscing nam et ac at ipsum. Ac id sit pharetra lorem ultrices, cum erat arcu non urna amet sodales, mauris odio, vestibulum nulla quisque ac metus, quam nostra a qui.',
         paragraphArticlePage_2:
@@ -154,7 +154,7 @@ const articlesArray: Article[] = [
         image: '/images/main/the-secrets-of-focus.jpg',
         text: 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit....',
         numberOfComments: 2,
-        goToPageCategory: 'category/events',
+        goToPageCategory: '/category/events',
         paragraphArticlePage_1:
             'orem ipsum dolor sit amet, lacus eu erat integer bibendum rutrum, sed arcu molestie, in quis ornare, rhoncus sceleris nam feugiat nibh leo. Ac suspendisse turpis posuere, cursus fames eu eget dolorem sapien. Eget cras urna nam, ultricies proin interdum facilisis arcu, eget sed quam enim nam, sit pede nonummy viverra dolor sed orci, nec feugiat donec phasellus. Arcu litora gravida, eget ac, magna in aut proin congue, ac at justo wisi. Adipiscing nam et ac at ipsum. Ac id sit pharetra lorem ultrices, cum erat arcu non urna amet sodales, mauris odio, vestibulum nulla quisque ac metus, quam nostra a qui.',
         paragraphArticlePage_2:
@@ -175,7 +175,7 @@ const articlesArray: Article[] = [
         image: '/images/main/the-pursuit-of-ideas.jpg',
         text: 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit....',
         numberOfComments: 2,
-        goToPageCategory: 'category/travel',
+        goToPageCategory: '/category/travel',
         paragraphArticlePage_1:
             'orem ipsum dolor sit amet, lacus eu erat integer bibendum rutrum, sed arcu molestie, in quis ornare, rhoncus sceleris nam feugiat nibh leo. Ac suspendisse turpis posuere, cursus fames eu eget dolorem sapien. Eget cras urna nam, ultricies proin interdum facilisis arcu, eget sed quam enim nam, sit pede nonummy viverra dolor sed orci, nec feugiat donec phasellus. Arcu litora gravida, eget ac, magna in aut proin congue, ac at justo wisi. Adipiscing nam et ac at ipsum. Ac id sit pharetra lorem ultrices, cum erat arcu non urna amet sodales, mauris odio, vestibulum nulla quisque ac metus, quam nostra a qui.',
         paragraphArticlePage_2:
@@ -196,7 +196,7 @@ const articlesArray: Article[] = [
         image: '/images/main/the-long-wait.jpg',
         text: 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit....',
         numberOfComments: 2,
-        goToPageCategory: 'category/culture',
+        goToPageCategory: '/category/culture',
         paragraphArticlePage_1:
             'orem ipsum dolor sit amet, lacus eu erat integer bibendum rutrum, sed arcu molestie, in quis ornare, rhoncus sceleris nam feugiat nibh leo. Ac suspendisse turpis posuere, cursus fames eu eget dolorem sapien. Eget cras urna nam, ultricies proin interdum facilisis arcu, eget sed quam enim nam, sit pede nonummy viverra dolor sed orci, nec feugiat donec phasellus. Arcu litora gravida, eget ac, magna in aut proin congue, ac at justo wisi. Adipiscing nam et ac at ipsum. Ac id sit pharetra lorem ultrices, cum erat arcu non urna amet sodales, mauris odio, vestibulum nulla quisque ac metus, quam nostra a qui.',
         paragraphArticlePage_2:
@@ -217,7 +217,7 @@ const articlesArray: Article[] = [
         image: '/images/main/hunting-for-words.jpg',
         text: 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit....',
         numberOfComments: 2,
-        goToPageCategory: 'category/culture',
+        goToPageCategory: '/category/culture',
         slide: 'yes',
         paragraphArticlePage_1:
             'orem ipsum dolor sit amet, lacus eu erat integer bibendum rutrum, sed arcu molestie, in quis ornare, rhoncus sceleris nam feugiat nibh leo. Ac suspendisse turpis posuere, cursus fames eu eget dolorem sapien. Eget cras urna nam, ultricies proin interdum facilisis arcu, eget sed quam enim nam, sit pede nonummy viverra dolor sed orci, nec feugiat donec phasellus. Arcu litora gravida, eget ac, magna in aut proin congue, ac at justo wisi. Adipiscing nam et ac at ipsum. Ac id sit pharetra lorem ultrices, cum erat arcu non urna amet sodales, mauris odio, vestibulum nulla quisque ac metus, quam nostra a qui.',
@@ -239,7 +239,7 @@ const articlesArray: Article[] = [
         image: '/images/main/honing-the-craft.jpg',
         text: 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit....',
         numberOfComments: 2,
-        goToPageCategory: 'category/trtavel',
+        goToPageCategory: '/category/trtavel',
         slide: 'yes',
         paragraphArticlePage_1:
             'orem ipsum dolor sit amet, lacus eu erat integer bibendum rutrum, sed arcu molestie, in quis ornare, rhoncus sceleris nam feugiat nibh leo. Ac suspendisse turpis posuere, cursus fames eu eget dolorem sapien. Eget cras urna nam, ultricies proin interdum facilisis arcu, eget sed quam enim nam, sit pede nonummy viverra dolor sed orci, nec feugiat donec phasellus. Arcu litora gravida, eget ac, magna in aut proin congue, ac at justo wisi. Adipiscing nam et ac at ipsum. Ac id sit pharetra lorem ultrices, cum erat arcu non urna amet sodales, mauris odio, vestibulum nulla quisque ac metus, quam nostra a qui.',
@@ -261,7 +261,7 @@ const articlesArray: Article[] = [
         image: '/images/main/drifting-together.jpg',
         text: 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit....',
         numberOfComments: 2,
-        goToPageCategory: 'category/living',
+        goToPageCategory: '/category/living',
         slide: 'yes',
         paragraphArticlePage_1:
             'orem ipsum dolor sit amet, lacus eu erat integer bibendum rutrum, sed arcu molestie, in quis ornare, rhoncus sceleris nam feugiat nibh leo. Ac suspendisse turpis posuere, cursus fames eu eget dolorem sapien. Eget cras urna nam, ultricies proin interdum facilisis arcu, eget sed quam enim nam, sit pede nonummy viverra dolor sed orci, nec feugiat donec phasellus. Arcu litora gravida, eget ac, magna in aut proin congue, ac at justo wisi. Adipiscing nam et ac at ipsum. Ac id sit pharetra lorem ultrices, cum erat arcu non urna amet sodales, mauris odio, vestibulum nulla quisque ac metus, quam nostra a qui.',

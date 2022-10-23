@@ -1,5 +1,6 @@
 import articlesArray from '../../components/Articles/articlesArray'
 import ArticleListItem from '../../components/Articles/ArticleListItem'
+import ScrollToTop from 'components/ScrollToTop/ScrollToTop'
 type CategoryProps = {
     id: number
     name1: string
@@ -35,6 +36,7 @@ const CategoryLifestylePage = ({
     }
     return (
         <section className="section-article" style={{ paddingTop: '0' }}>
+            <ScrollToTop />
             <div className="title-bg">
                 <h1 className="title">Lifestyle</h1>
             </div>

@@ -1,6 +1,6 @@
 import ArticlesList from '../../components/Articles/ArticlesList'
 import SlideList from '../../components/Slider/SlideList'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import './Main.scss'
 import AboutPage from 'pages/AboutPage/AboutPage'
 import CategoryLivingPage from 'pages/CategoryPages/CategoryLivingPage'
@@ -130,30 +130,6 @@ const Main = ({
                                     showArticlePage={showArticlePage}
                                 />
                             }
-                        />
-                        <Route
-                            path="/category/living/category/living"
-                            element={<Navigate to="/category/living" replace />}
-                        />
-                        <Route
-                            path="/category/culture/category/culture"
-                            element={
-                                <Navigate to="/category/culture" replace />
-                            }
-                        />
-                        <Route
-                            path="/category/events/category/events"
-                            element={<Navigate to="/category/events" replace />}
-                        />
-                        <Route
-                            path="category/lifestyle/category/lifestyle"
-                            element={
-                                <Navigate to="/category/lifestyle" replace />
-                            }
-                        />
-                        <Route
-                            path="/category/travel/category/travel"
-                            element={<Navigate to="/category/travel" replace />}
                         />
                         <Route
                             path="favorite"
