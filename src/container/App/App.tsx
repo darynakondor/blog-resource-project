@@ -8,6 +8,9 @@ import Footer from 'container/Footer/Footer'
 type PostsFavoriteProps = {
     [id: number]: number
 }
+type SpecificArticleProps = {
+    [id: number]: number
+}
 
 type PostsLikeStateProps = {
     [id: number]: boolean
@@ -17,6 +20,8 @@ const App = () => {
     const [postsInFavorite, setPostsInFavorite] = useState<PostsFavoriteProps>(
         {}
     )
+    const [specificArticle, setSpecificArticle] =
+        useState<SpecificArticleProps>({})
     const addPostToFavorite = (id: number) => {
         setPostsInFavorite((prevState: PostsFavoriteProps) => ({
             ...prevState,
@@ -24,7 +29,7 @@ const App = () => {
         }))
     }
     const showArticlePage = (id: number) => {
-        setPostsInFavorite((prevState: PostsFavoriteProps) => ({
+        setSpecificArticle((prevState: SpecificArticleProps) => ({
             [id]: prevState[id],
         }))
     }
@@ -53,6 +58,7 @@ const App = () => {
                 removePostFromFavorite={removePostFromFavorite}
                 postsInFavorite={postsInFavorite}
                 showArticlePage={showArticlePage}
+                specificArticle={specificArticle}
             />
             <Footer />
         </>

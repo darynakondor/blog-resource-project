@@ -3,7 +3,7 @@ import SpecificaArticle from 'components/SpecificArticle/SpecificaArticle'
 import SpecificArticleExtended from 'components/SpecificArticle/SpecificArticleExtended'
 
 type Props = {
-    postsInFavorite: {
+    specificArticle: {
         [id: number]: number
     }
     articlesObject?: {
@@ -12,11 +12,11 @@ type Props = {
     ArticleItem?: {}
 }
 
-const ArticlePage = ({ postsInFavorite }: Props) => {
+const ArticlePage = ({ specificArticle }: Props) => {
     return (
         <>
             <SpecificaArticle
-                postsInFavorite={postsInFavorite}
+                specificArticle={specificArticle}
                 ArticleItem={SpecificArticleExtended}
             />
         </>

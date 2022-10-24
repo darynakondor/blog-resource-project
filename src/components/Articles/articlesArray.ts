@@ -239,7 +239,7 @@ const articlesArray: Article[] = [
         image: '/images/main/honing-the-craft.jpg',
         text: 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit....',
         numberOfComments: 2,
-        goToPageCategory: '/category/trtavel',
+        goToPageCategory: '/category/travel',
         slide: 'yes',
         paragraphArticlePage_1:
             'orem ipsum dolor sit amet, lacus eu erat integer bibendum rutrum, sed arcu molestie, in quis ornare, rhoncus sceleris nam feugiat nibh leo. Ac suspendisse turpis posuere, cursus fames eu eget dolorem sapien. Eget cras urna nam, ultricies proin interdum facilisis arcu, eget sed quam enim nam, sit pede nonummy viverra dolor sed orci, nec feugiat donec phasellus. Arcu litora gravida, eget ac, magna in aut proin congue, ac at justo wisi. Adipiscing nam et ac at ipsum. Ac id sit pharetra lorem ultrices, cum erat arcu non urna amet sodales, mauris odio, vestibulum nulla quisque ac metus, quam nostra a qui.',

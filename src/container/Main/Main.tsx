@@ -18,6 +18,9 @@ type Props = {
     postsInFavorite: {
         [id: number]: number
     }
+    specificArticle: {
+        [id: number]: number
+    }
     toggleLiked: (id: number, isLiked: boolean) => void
     postsLikeState: {
         [id: number]: boolean
@@ -29,6 +32,7 @@ const Main = ({
     addPostToFavorite,
     removePostFromFavorite,
     postsInFavorite,
+    specificArticle,
     toggleLiked,
     postsLikeState,
     showArticlePage,
@@ -149,7 +153,7 @@ const Main = ({
                             path="post/:id"
                             element={
                                 <ArticlePage
-                                    postsInFavorite={postsInFavorite}
+                                    specificArticle={specificArticle}
                                 />
                             }
                         />
